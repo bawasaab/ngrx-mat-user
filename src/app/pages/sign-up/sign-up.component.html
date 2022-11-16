@@ -1,0 +1,44 @@
+<p>sign-up works!</p>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+<mat-card>
+  <mat-card-title>Sign Up</mat-card-title>
+  <mat-card-subtitle>Enter user details</mat-card-subtitle>
+  <mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="firstName">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="lastName">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="email">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="password">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <br />
+  <button mat-raised-button color="primary">Sign Up</button>
+  <a mat-raised-button color="warn" routerLink="sign-in">Back</a>
+  <p>Form Status: {{ signUpForm.status }}</p>
+  <p>
+    {{ signUpForm.value | json }}
+  </p>
+</mat-card>
+</form>
