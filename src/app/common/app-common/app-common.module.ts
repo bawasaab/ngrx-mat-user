@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { NgMatModule } from "../../common/ng-mat/ng-mat.module";
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const modules = [
+  HttpClientModule,
   NgMatModule,
   ReactiveFormsModule
 ]

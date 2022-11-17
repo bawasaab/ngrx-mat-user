@@ -16,7 +16,10 @@ import * as fromSignIn from '../reducers';
     SignInRoutingModule,
     AppCommonModule,
     // StoreModule.forFeature(fromSignIn.signInFeatureKey, fromSignIn.reducers, { metaReducers: fromSignIn.metaReducers })
-    StoreModule.forFeature(fromSignIn.signInFeatureKey, fromSignIn.reducers)
+    StoreModule.forFeature(fromSignIn.signInFeatureKey,
+      fromSignIn.signInReducer
+      // fromSignIn.reducers
+    )
   ]
 })
 export class SignInModule { }

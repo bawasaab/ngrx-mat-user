@@ -13,6 +13,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './reducers';
+import { AppCommonModule } from './common/app-common/app-common.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { reducers, metaReducers } from './reducers';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgMatModule,
+    AppCommonModule,
     ReactiveFormsModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
