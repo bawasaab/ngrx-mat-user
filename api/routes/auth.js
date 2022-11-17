@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const { getUserByEmail } = require('../services/users.service')
 
-/* GET users listing. */
 router.post('/login', async (req, res, next) => {
   const body = req.body
   const user = await getUserByEmail(body.email)

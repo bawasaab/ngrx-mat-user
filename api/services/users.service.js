@@ -1,3 +1,4 @@
+let cntr = 3
 const users = [
   {
     id: 1,
@@ -40,8 +41,31 @@ const getUserByEmail = async (email) => {
   return user[0]
 }
 
+const postUserInsert = async (user) => {
+  const users = await getUserList();
+  const id = cntr++
+  user.id = id
+  users.push(user)
+  return await getUserById(id)
+}
+
+const getUserIndex = async (userId) => {
+  const users = await getUserList();
+  const position = users.map(e => parseInt(e.id)).indexOf(parseInt(userId))
+  return position
+}
+
+const patchUserUpdate = async (id, user) => {
+  const userIndx = await getUserIndex(id)
+  user.id = id
+  users[userIndx] = user
+  return await getUserById(id)
+}
+
 module.exports = {
   getUserList,
   getUserById,
-  getUserByEmail
+  getUserByEmail,
+  postUserInsert,
+  patchUserUpdate
 }
