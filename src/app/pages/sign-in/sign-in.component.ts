@@ -32,7 +32,6 @@ export class SignInComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.signInForm.value);
     const data = <iSignIn>this.signInForm.value
     this.signInService.signIn(data)
     .pipe(
@@ -47,7 +46,6 @@ export class SignInComponent implements OnInit {
          this.store.dispatch(action)
          this.store.dispatch(signInAction({user: user}))
          */
-        console.log('user', user)
         this.store.dispatch(SignInActions.signIn({user}))
         this.router.navigateByUrl('/users')
       })

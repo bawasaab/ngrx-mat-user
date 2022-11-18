@@ -27,7 +27,6 @@ import { AppCommonModule } from './common/app-common/app-common.module';
     NgMatModule,
     AppCommonModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
