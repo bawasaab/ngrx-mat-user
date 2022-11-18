@@ -12,8 +12,8 @@ export class MyCounterComponent implements OnInit {
 
   count$!: Observable<number>;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count$ = store.select('count');
+  constructor(private store: Store<{ counterReducer: number }>) {
+    this.count$ = store.select('counterReducer');
   }
 
   increment() {

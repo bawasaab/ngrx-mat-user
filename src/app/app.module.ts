@@ -29,8 +29,7 @@ import { MyCounterComponent } from './my-counter/my-counter.component';
     NgMatModule,
     ReactiveFormsModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    // StoreModule.forRoot(reducers, { metaReducers }),
-    StoreModule.forRoot({ count: counterReducer }),
+    StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],
